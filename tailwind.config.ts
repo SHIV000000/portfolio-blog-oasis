@@ -22,22 +22,22 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#221F26",
+        background: "#0F0F0F",
         foreground: "#FFFFFF",
         primary: {
-          DEFAULT: "#403E43",
+          DEFAULT: "#222222",
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#8A898C",
+          DEFAULT: "#333333",
           foreground: "#FFFFFF",
         },
         muted: {
-          DEFAULT: "#333333",
-          foreground: "#9F9EA1",
+          DEFAULT: "#1A1A1A",
+          foreground: "#CCCCCC",
         },
         accent: {
-          DEFAULT: "#403E43",
+          DEFAULT: "#222222",
           foreground: "#FFFFFF",
         },
       },
