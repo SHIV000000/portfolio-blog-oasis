@@ -56,12 +56,15 @@ const Index = () => {
               and solve complex problems.
             </p>
           </div>
-          <div className="flex-1">
-            <img
-              src="/lovable-uploads/d9b61507-d6c4-4af1-8447-ea1c4ffe013b.png"
-              alt="Developer"
-              className="w-full max-w-md mx-auto rounded-lg"
-            />
+          <div className="flex-1 flex justify-center">
+            <div className="relative w-80 h-80">
+              <img
+                src="/lovable-uploads/14e0a84e-59a6-41fc-8513-692ece66d9be.png"
+                alt="Profile"
+                className="w-full h-full object-cover border-2 border-white/20 rounded-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent rounded-lg"></div>
+            </div>
           </div>
         </div>
       </section>
