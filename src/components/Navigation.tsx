@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const location = useLocation();
@@ -10,7 +11,7 @@ const Navigation = () => {
           <Link to="/" className="text-2xl font-bold text-primary">
             Portfolio
           </Link>
-          <div className="flex gap-6">
+          <div className="flex items-center gap-6">
             <Link
               to="/"
               className={`text-lg hover:text-primary transition-colors ${
@@ -27,6 +28,7 @@ const Navigation = () => {
             >
               Blog
             </Link>
+            <ThemeToggle />
           </div>
         </div>
       </div>
