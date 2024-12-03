@@ -99,19 +99,10 @@
   }
 
   .noise-bg {
-    background-image: url('/lovable-uploads/be9e30e1-4770-409a-827f-d5947cae9e7a.png');
+    background-image: url('/lovable-uploads/f5e4dd2c-b646-4f2c-b4fa-577feedde5d1.png');
     background-repeat: repeat;
-    background-size: 150px 150px;
-    opacity: 0.15;
-    mix-blend-mode: overlay;
-  }
-
-  .glare-effect-dark {
-    background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.05) 100%);
-  }
-
-  .glare-effect-light {
-    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.03) 100%);
+    background-size: 200px 200px;
+    opacity: 0.05;
   }
 }
 
