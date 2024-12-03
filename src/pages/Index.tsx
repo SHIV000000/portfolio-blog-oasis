@@ -50,14 +50,15 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground pt-20 relative overflow-hidden">
-      {/* Background Animation */}
+      {/* Background Animation with Noise */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted animate-gradient"></div>
+        <div className="absolute inset-0 noise-bg"></div>
         <div className="absolute inset-0 opacity-30">
           {[...Array(50)].map((_, i) => (
             <div
               key={i}
-              className="absolute rounded-full bg-primary/10"
+              className="absolute rounded-md bg-primary/10"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -70,7 +71,7 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Hero Section */}
+      {/* Rest of the sections */}
       <motion.section 
         className="container mx-auto px-4 py-20 border-4 border-white/20"
         initial={{ opacity: 0, y: 50 }}

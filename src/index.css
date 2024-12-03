@@ -97,11 +97,18 @@
   .animate-pulse-slow {
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
+
+  .noise-bg {
+    background-image: url('/lovable-uploads/f5e4dd2c-b646-4f2c-b4fa-577feedde5d1.png');
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.05;
+  }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border rounded-sm;
   }
   body {
     @apply bg-background text-foreground;
@@ -114,7 +121,7 @@
 }
 
 .glass {
-  @apply bg-background/10 backdrop-blur-lg border-2 border-white/20 rounded-2xl;
+  @apply bg-background/10 backdrop-blur-lg border-2 border-white/20 rounded-md;
 }
 
 .card-gradient {
