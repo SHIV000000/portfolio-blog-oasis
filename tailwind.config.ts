@@ -24,13 +24,13 @@ export default {
         ring: "hsl(var(--ring))",
         background: {
           DEFAULT: "hsl(var(--background))",
-          dark: "#0F0F0F",
-          light: "#FFFFFF",
+          dark: "#141414",
+          light: "#F5F5F5",
         },
         foreground: {
           DEFAULT: "hsl(var(--foreground))",
-          dark: "#FFFFFF",
-          light: "#0F0F0F",
+          dark: "#FAFAFA",
+          light: "#141414",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -63,10 +63,22 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        shine: {
+          "to": { backgroundPosition: "200% center" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "shine": "shine 8s ease-in-out infinite",
+      },
+      spacing: {
+        "section": "clamp(4rem, 10vw, 8rem)",
       },
     },
   },
