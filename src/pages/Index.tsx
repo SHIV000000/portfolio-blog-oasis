@@ -50,10 +50,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground pt-20 relative overflow-hidden">
-      {/* Background Animation with Noise */}
+      {/* Background Animation with Enhanced Noise */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted animate-gradient"></div>
         <div className="absolute inset-0 noise-bg"></div>
+        <div className="absolute inset-0 dark:glare-effect-dark light:glare-effect-light"></div>
         <div className="absolute inset-0 opacity-30">
           {[...Array(50)].map((_, i) => (
             <div
