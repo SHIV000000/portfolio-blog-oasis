@@ -118,7 +118,7 @@
 }
 
 .card-gradient {
-  @apply bg-gradient-to-br from-card to-secondary/80;
+  @apply bg-gradient-to-br from-background via-muted to-secondary/80;
 }
 
 .hover-lift {
