@@ -6,6 +6,7 @@ const Index = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [budget, setBudget] = useState("");
 
   const projects = [
     {
@@ -40,7 +41,7 @@ const Index = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ name, email, message });
+    console.log({ name, email, message, budget });
   };
 
   return (
@@ -137,52 +138,71 @@ const Index = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <div className="container mx-auto px-4 border-4 border-white/20 py-12">
-          <h2 className="text-4xl font-bold mb-12">LET'S WORK <span className="text-gray-500">TOGETHER</span></h2>
-          <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
+        <div className="container mx-auto px-4 py-12 bg-[#141414] border-4 border-white/20">
+          <h2 className="text-8xl font-bold mb-12 tracking-tighter">LET'S WORK <span className="text-gray-500">TOGETHER</span></h2>
+          <form onSubmit={handleSubmit} className="max-w-2xl space-y-6">
             <div className="grid grid-cols-2 gap-6">
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <div className="space-y-2">
+                <label htmlFor="name" className="block text-sm text-gray-400">Name</label>
                 <input
                   id="name"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="Your name"
-                  className="w-full p-3 bg-muted rounded-none border-4 border-white/20 focus:border-white/40 focus:outline-none transition-colors"
+                  placeholder="Your Name"
+                  className="w-full p-3 bg-[#2A2A2A] rounded-none text-white placeholder:text-gray-500 focus:outline-none"
                   required
                 />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="email" className="block text-sm text-gray-400">Email</label>
                 <input
                   id="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your@email.com"
-                  className="w-full p-3 bg-muted rounded-none border-4 border-white/20 focus:border-white/40 focus:outline-none transition-colors"
+                  className="w-full p-3 bg-[#2A2A2A] rounded-none text-white placeholder:text-gray-500 focus:outline-none"
                   required
                 />
-              </motion.div>
+              </div>
             </div>
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            
+            <div className="space-y-2">
+              <label htmlFor="budget" className="block text-sm text-gray-400">Budget</label>
+              <select
+                id="budget"
+                value={budget}
+                onChange={(e) => setBudget(e.target.value)}
+                className="w-full p-3 bg-[#2A2A2A] rounded-none text-white appearance-none focus:outline-none"
+                required
+              >
+                <option value="" disabled>Select...</option>
+                <option value="small">$1,000 - $5,000</option>
+                <option value="medium">$5,000 - $10,000</option>
+                <option value="large">$10,000+</option>
+              </select>
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="message" className="block text-sm text-gray-400">Message</label>
               <textarea
                 id="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Write your message here"
-                className="w-full p-3 bg-muted rounded-none border-4 border-white/20 focus:border-white/40 focus:outline-none transition-colors"
-                rows={4}
+                placeholder="Message"
+                className="w-full p-3 bg-[#2A2A2A] rounded-none text-white placeholder:text-gray-500 focus:outline-none min-h-[120px]"
                 required
               />
-            </motion.div>
+            </div>
+
             <motion.button
               type="submit"
-              className="w-full bg-muted text-white py-3 border-4 border-white/20 hover:border-white/40 transition-colors relative overflow-hidden group"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="w-full bg-[#F97316] text-white py-4 transition-colors hover:bg-[#F97316]/90"
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
             >
-              <span className="relative z-10">Submit</span>
-              <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-20 transition-opacity" />
+              Submit
             </motion.button>
           </form>
         </div>
