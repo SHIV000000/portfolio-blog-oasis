@@ -49,67 +49,57 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground pt-20 relative overflow-hidden">
+    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       {/* Background Animation with Enhanced Noise */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted animate-gradient opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-background-dark to-background-dark animate-gradient opacity-95"></div>
         <div className="absolute inset-0 noise-bg"></div>
         <div className="absolute inset-0 dark:glare-effect-dark light:glare-effect-light opacity-100"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/70"></div>
-        <div className="absolute inset-0 opacity-40">
-          {[...Array(50)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-md bg-primary/10"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                width: `${Math.random() * 50 + 10}px`,
-                height: `${Math.random() * 50 + 10}px`,
-                animation: `float ${Math.random() * 10 + 5}s infinite linear`
-              }}
-            />
-          ))}
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background-dark/90"></div>
       </div>
 
-      {/* Rest of the sections */}
+      {/* Hero Section */}
       <motion.section 
-        className="container mx-auto px-4 py-20 border-4 border-white/20"
+        className="container mx-auto px-4 min-h-screen flex items-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="flex flex-col md:flex-row items-center gap-12">
+        <div className="flex flex-col md:flex-row items-center gap-12 w-full">
           <motion.div 
-            className="flex-1 text-left"
+            className="flex-1"
             variants={fadeInUp}
             initial="initial"
             animate="animate"
           >
-            <h1 className="text-5xl font-bold mb-6 hover:scale-105 transition-transform cursor-default">
-              SOFTWARE
-              <span className="block text-gray-500">DEVELOPER</span>
-            </h1>
-            <p className="text-xl text-muted-foreground hover:text-foreground transition-colors">
-              An enthusiastic technically prepared individual with technical experience ready to explore new technologies
-              and solve complex problems.
-            </p>
-          </motion.div>
-          <motion.div 
-            className="flex-1 flex justify-center"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="relative w-80 h-80 transform hover:scale-105 transition-transform duration-300">
+            <div className="relative w-[400px] h-[400px] rounded-3xl overflow-hidden border-2 border-white/10">
               <img
-                src="/lovable-uploads/9646ab6b-ae5b-44cb-84d4-9480515b88ee.png"
+                src="/lovable-uploads/77260a4f-7635-45b3-bb59-b5cb058f23f9.png"
                 alt="Profile"
-                className="w-full h-full object-cover rounded-lg shadow-xl"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background-dark/40"></div>
+              <div className="absolute top-0 right-0 w-24 h-24">
+                <svg viewBox="0 0 100 100" className="w-full h-full fill-none stroke-[#FF6B00] stroke-[2] stroke-dashed opacity-60">
+                  <path d="M 95,5 C 95,5 95,5 5,95" />
+                </svg>
+              </div>
             </div>
+          </motion.div>
+          
+          <motion.div 
+            className="flex-1 space-y-6"
+            variants={fadeInUp}
+            initial="initial"
+            animate="animate"
+          >
+            <h1 className="text-8xl font-bold tracking-tighter">
+              SOFTWARE
+              <span className="block text-[#666666] mt-2">ENGINEER</span>
+            </h1>
+            <p className="text-xl text-[#999999] max-w-xl">
+              Passionate about creating intuitive and engaging user experiences. Specialize in transforming ideas into beautifully crafted products.
+            </p>
           </motion.div>
         </div>
       </motion.section>
