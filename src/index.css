@@ -99,29 +99,29 @@
   }
 
   .noise-bg {
-    background-image: url('/lovable-uploads/adb46635-6562-44d7-8aab-1b4acdc1786d.png');
+    background-image: url('/lovable-uploads/4984f47c-d42c-456d-96a6-00c9177662b3.png');
     background-repeat: repeat;
-    background-size: 100px 100px;
-    opacity: 0.4;
-    mix-blend-mode: soft-light;
-    filter: contrast(120%) brightness(120%);
+    background-size: 200px 200px;
+    opacity: 0.7;
+    mix-blend-mode: overlay;
+    filter: contrast(150%) brightness(150%);
   }
 
   .glare-effect-dark {
     background: linear-gradient(to bottom, 
       transparent 0%, 
-      rgba(255, 255, 255, 0.02) 40%,
-      rgba(255, 255, 255, 0.1) 80%,
-      rgba(255, 255, 255, 0.15) 100%
+      rgba(255, 255, 255, 0.05) 40%,
+      rgba(255, 255, 255, 0.15) 80%,
+      rgba(255, 255, 255, 0.25) 100%
     );
   }
 
   .glare-effect-light {
     background: linear-gradient(to bottom,
       transparent 0%,
-      rgba(0, 0, 0, 0.02) 40%,
-      rgba(0, 0, 0, 0.05) 80%,
-      rgba(0, 0, 0, 0.08) 100%
+      rgba(0, 0, 0, 0.03) 40%,
+      rgba(0, 0, 0, 0.08) 80%,
+      rgba(0, 0, 0, 0.12) 100%
     );
   }
 }
