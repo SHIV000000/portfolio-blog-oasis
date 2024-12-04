@@ -1,16 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import HeroSection from "../components/HeroSection";
 
 const Index = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
 
   const projects = [
     {
@@ -53,56 +48,13 @@ const Index = () => {
       {/* Background Animation with Enhanced Noise */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-background-dark to-background-dark animate-gradient opacity-95"></div>
-        <div className="absolute inset-0 noise-bg"></div>
+        <div className="absolute inset-0 noise-bg opacity-70 contrast-150 brightness-150"></div>
         <div className="absolute inset-0 dark:glare-effect-dark light:glare-effect-light opacity-100"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background-dark/90"></div>
       </div>
 
       {/* Hero Section */}
-      <motion.section 
-        className="container mx-auto px-4 min-h-screen flex items-center"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="flex flex-col md:flex-row items-center gap-12 w-full">
-          <motion.div 
-            className="flex-1"
-            variants={fadeInUp}
-            initial="initial"
-            animate="animate"
-          >
-            <div className="relative w-[400px] h-[400px] rounded-3xl overflow-hidden border-2 border-white/10">
-              <img
-                src="/lovable-uploads/77260a4f-7635-45b3-bb59-b5cb058f23f9.png"
-                alt="Profile"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background-dark/40"></div>
-              <div className="absolute top-0 right-0 w-24 h-24">
-                <svg viewBox="0 0 100 100" className="w-full h-full fill-none stroke-[#FF6B00] stroke-[2] stroke-dashed opacity-60">
-                  <path d="M 95,5 C 95,5 95,5 5,95" />
-                </svg>
-              </div>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            className="flex-1 space-y-6"
-            variants={fadeInUp}
-            initial="initial"
-            animate="animate"
-          >
-            <h1 className="text-8xl font-bold tracking-tighter">
-              SOFTWARE
-              <span className="block text-[#666666] mt-2">ENGINEER</span>
-            </h1>
-            <p className="text-xl text-[#999999] max-w-xl">
-              Passionate about creating intuitive and engaging user experiences. Specialize in transforming ideas into beautifully crafted products.
-            </p>
-          </motion.div>
-        </div>
-      </motion.section>
+      <HeroSection />
 
       {/* Projects Section */}
       <motion.section 
